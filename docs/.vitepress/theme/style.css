@@ -1,0 +1,125 @@
+/* .vitepress/theme/style.css */
+
+/**
+ * ========================
+ * 1. 核心变量覆盖
+ * ========================
+ */
+ :root {
+    /* 品牌色 */
+    --vp-c-brand: #646cff;
+    --vp-c-brand-light: #747bff;
+    --vp-c-brand-lighter: #9499ff;
+    --vp-c-brand-dark: #535bf2;
+    --vp-c-brand-darker: #454ce1;
+  
+    /* 背景色 */
+    --vp-c-bg: #ffffff;
+    --vp-c-bg-soft: #f9f9f9;
+    --vp-c-bg-mute: #f1f1f1;
+  
+    /* 文字色 */
+    --vp-c-text-1: rgba(0, 0, 0, 0.92);
+    --vp-c-text-2: rgba(0, 0, 0, 0.72);
+    --vp-c-text-3: rgba(0, 0, 0, 0.52);
+  }
+  
+  /**
+   * ========================
+   * 2. 暗黑模式变量
+   * ========================
+   */
+  .dark {
+    --vp-c-bg: #1a1a1a;
+    --vp-c-bg-soft: #242424;
+    --vp-c-bg-mute: #2d2d2d;
+    
+    --vp-c-text-1: rgba(255, 255, 255, 0.92);
+    --vp-c-text-2: rgba(255, 255, 255, 0.72);
+    --vp-c-text-3: rgba(255, 255, 255, 0.52);
+  }
+  
+  /**
+   * ========================
+   * 3. 卡片组件增强样式
+   * ========================
+   */
+  .vp-card {
+    --vp-card-accent: var(--vp-c-brand);
+    --vp-card-bg: var(--vp-c-bg-soft);
+    
+    margin: 16px 0;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  
+  .vp-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  }
+  
+  /**
+   * ========================
+   * 4. 全局排版增强
+   * ========================
+   */
+  .vp-doc {
+    /* 段落间距 */
+    p {
+      margin: 16px 0;
+      line-height: 1.7;
+    }
+  
+    /* 标题锚点 */
+    h1, h2, h3, h4, h5, h6 {
+      .header-anchor {
+        opacity: 0.5;
+        transition: opacity 0.2s ease;
+      }
+  
+      &:hover .header-anchor {
+        opacity: 1;
+      }
+    }
+  }
+  
+  /**
+   * ========================
+   * 5. 响应式调整
+   * ========================
+   */
+  @media (max-width: 768px) {
+    :root {
+      --vp-sidebar-width: 280px;
+    }
+    
+    .vp-card {
+      margin: 12px 0;
+    }
+  }
+  
+  /**
+   * ========================
+   * 6. 动画效果
+   * ========================
+   */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .vp-doc [class*='language-'] {
+    animation: fadeIn 0.3s ease;
+  }
+  
+  /**
+   * ========================
+   * 7. 工具类
+   * ========================
+   */
+  .text-brand {
+    color: var(--vp-c-brand);
+  }
+  
+  .bg-soft {
+    background: var(--vp-c-bg-soft);
+  }
