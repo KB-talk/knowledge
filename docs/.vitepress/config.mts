@@ -7,7 +7,7 @@ export default defineConfig({
   title: "凯博的文档管理",
   description: "这里不生产标准答案，只野蛮生长着各种学习碎片。🌱",
   head: [
-    ['link', { rel: 'icon', href: 'https://KB-talk.github.io/picx-images-hosting/img/log.png' }] 
+    ['link', { rel: 'icon', href: 'https://KB-talk.github.io/picx-images-hosting/img/logo.1p5rqa10pxsw.webp' }] 
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -40,6 +40,13 @@ export default defineConfig({
             { text: '升级固件', link: '/rk3588/1.SDK/4.升级固件.md' },
           ]
         },
+        {
+          text: '驱动开发',
+          items: [
+            { text: '驱动基本介绍', link: '/rk3588/2.驱动开发/驱动基本介绍.md' },
+            { text: '摄像头驱动', link: '/rk3588/2.驱动开发/摄像头驱动.md' },
+          ]
+        },
       ],
       '/pytorch/':[
         {
@@ -47,7 +54,6 @@ export default defineConfig({
           items: [
             { text: '前言', link: '/pytorch/0.前言/0.前言.md' },
             { text: '环境搭建', link: '/pytorch/0.前言/1.环境搭建.md' },
-            { text: '新建工程', link: '/pytorch/0.前言/2.新建工程.md' }
           ]
         },
         {
